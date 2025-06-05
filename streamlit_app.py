@@ -25,7 +25,7 @@ def get_df(years=[2022, 2023, 2024]):
     df = []
     for year in years:
         try:
-            df.append(pd.read_csv(f"/workspace/wedding_rainfall_analysis/dataset/rain_{year}.csv", encoding="EUC-KR"))
+            df.append(pd.read_csv(f"dataset/rain_{year}.csv", encoding="EUC-KR"))
         except:
             st.warning(f"Data file rain_{year}.csv not found. Either no data for this year or filename is incorrect.")
     
